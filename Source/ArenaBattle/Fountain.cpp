@@ -63,3 +63,12 @@ void AFountain::Tick(float DeltaTime)
 
 }
 
+void AFountain::EndPlay(const EEndPlayReason::Type EndPlayReason) {
+	Super::EndPlay(EndPlayReason);
+	ABLOG_S(Warning);
+}
+
+void AFountain::PostInitializeComponents() {
+	Super::PostInitializeComponents();
+	ABLOG_S(Warning);
+}
