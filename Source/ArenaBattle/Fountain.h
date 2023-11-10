@@ -5,6 +5,8 @@
 //#include "CoreMinimal.h"
 //#include "EngineMinimal.h"
 #include "ArenaBattle.h"
+//#include "GameFreamwork/RotatingMovementComponent.h" 언리얼 4 기준
+#include "Components/SceneComponent.h" //언리얼 5
 #include "GameFramework/Actor.h"
 #include "Fountain.generated.h"
 
@@ -41,4 +43,10 @@ public:
 
 	UPROPERTY(EditAnywhere, Category=ID)
 	int32 ID;
+
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* Movement; //언리얼 4와 차이가 있음
+
+private:
+	UPROPERTY(EditAnywhere, Category = Stat, Meta = (AllowPrivateAccess = true)) float RotateSpeed;
 };
