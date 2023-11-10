@@ -49,6 +49,10 @@ AFountain::AFountain()
 void AFountain::BeginPlay()
 {
 	Super::BeginPlay();
+
+	ABLOG_S(Warning);
+	ABLOG(Warning, TEXT("Actor name: %s, ID: %d, Location X: %.3f"), *GetName(), ID, GetActorLocation().X);
+	//UE_LOG(ArenaBattle, Warning, TEXT("Actor name: %s, ID: %d, Location X: %.3f"), *GetName(), ID, GetActorLocation().X);
 	
 }
 
